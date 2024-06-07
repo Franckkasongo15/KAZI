@@ -1,0 +1,56 @@
+NDVI for DRCongo 
+
+// Define the region of interest (DRC)
+var drc = ee.Geometry.Polygon([
+  [[12.0, 5.0], [30.0, 5.0], [30.0, -10.0], [12.0, -10.0], [12.0, 5.0]]
+]);
+
+// Define the time range (September) for each year
+var startYear = 2016;
+var endYear = 2023;
+
+// Function to mask clouds using the Sentinel-2 QA band
+function maskS2Clouds(image) {
+  var qa = image.select('QA60');
+  var cloudBitMask = ee.Number(2).pow(10).int();
+  var cirrusBitMask = ee.Number(2).pow(11).int();
+  var mask = qa.bitwiseAnd(cloudBitMask).eq(0).and(qa.bitwiseAnd(cirrusBitMask).eq(0));
+  return image.updateMask(mask).divide(10000);
+}
+
+// Function to calculate NDVI
+function calculateNDVI(image) {
+  return image.normalizedDifference(['B8', 'B4']).rename('NDVI');
+}
+
+// Loop over each year to create a yearly NDVI composite
+for (var year = startYear; year <= endYear; year++) {
+  var startDate = ee.Date.fromYMD(year, 9, 1);
+  var endDate = ee.Date.fromYMD(year, 9, 30);
+
+  var collection = ee.ImageCollection('COPERNICUS/S2')
+    .filterBounds(drc)
+    .filterDate(startDate, endDate)
+    .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 20))
+    .map(maskS2Clouds)
+    .map(calculateNDVI);
+
+  var composite = collection.median().clip(drc);
+
+  // Add the composite to the map
+  Map.addLayer(composite, {bands: ['NDVI'], min: 0, max: 1}, 'NDVI ' + year);
+
+  // Export the composite to Google Drive
+  Export.image.toDrive({
+    image: composite,
+    description: 'CongoBasin_NDVI_' + year,
+    folder: 'MSLA_Forrest_Watch',
+    scale: 100,  // Set scale to 100 meters per pixel to reduce resolution
+    region: drc,
+    fileFormat: 'GeoTIFF',
+    maxPixels: 1e9  // Set a higher maxPixels value to handle large exports
+  });
+}
+
+// Center the map on the DRC
+Map.centerObject(drc, 5);

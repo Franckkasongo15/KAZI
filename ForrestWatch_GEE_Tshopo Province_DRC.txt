@@ -1,0 +1,68 @@
+Tshopo Province - DRC 
+
+// Define the region of interest (forested part of Tshopo Province)
+var tshopoRegion = ee.Geometry.Polygon([
+  [[24.0, 2.0], [26.0, 2.0], [26.0, 0.0], [24.0, 0.0], [24.0, 2.0]]
+]);
+
+// Define the time range for each year (September)
+var years = [2016, 2017, 2018, 2023];
+
+// Function to mask clouds using the Sentinel-2 QA band
+function maskS2Clouds(image) {
+  var qa = image.select('QA60');
+  var cloudBitMask = ee.Number(2).pow(10).int();
+  var cirrusBitMask = ee.Number(2).pow(11).int();
+  var mask = qa.bitwiseAnd(cloudBitMask).eq(0).and(qa.bitwiseAnd(cirrusBitMask).eq(0));
+  return image.updateMask(mask).divide(10000);
+}
+
+// Function to calculate NDVI
+function calculateNDVI(image) {
+  return image.normalizedDifference(['B8', 'B4']).rename('NDVI');
+}
+
+// Loop over each year to create yearly composites for NDVI and natural color
+years.forEach(function(year) {
+  var startDate = ee.Date.fromYMD(year, 9, 1);
+  var endDate = ee.Date.fromYMD(year, 9, 30);
+
+  var collection = ee.ImageCollection('COPERNICUS/S2')
+    .filterBounds(tshopoRegion)
+    .filterDate(startDate, endDate)
+    .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 20))
+    .map(maskS2Clouds);
+
+  // Natural color composite
+  var naturalColor = collection.median().clip(tshopoRegion).select(['B4', 'B3', 'B2']); // Red, Green, Blue bands
+  Map.addLayer(naturalColor, {bands: ['B4', 'B3', 'B2'], min: 0, max: 0.3}, 'Natural Color ' + year);
+
+  // Export natural color composite to Google Drive
+  Export.image.toDrive({
+    image: naturalColor,
+    description: 'NaturalColor_Tshopo_' + year,
+    folder: 'MSLA_VPN',
+    scale: 30,
+    region: tshopoRegion,
+    fileFormat: 'GeoTIFF',
+    maxPixels: 1e9
+  });
+
+  // NDVI composite
+  var ndvi = collection.map(calculateNDVI).median().clip(tshopoRegion);
+  Map.addLayer(ndvi, {bands: ['NDVI'], min: 0, max: 1}, 'NDVI ' + year);
+
+  // Export NDVI composite to Google Drive
+  Export.image.toDrive({
+    image: ndvi,
+    description: 'NDVI_Tshopo_' + year,
+    folder: 'MSLA_VPN',
+    scale: 30,
+    region: tshopoRegion,
+    fileFormat: 'GeoTIFF',
+    maxPixels: 1e9
+  });
+});
+
+// Center the map on Tshopo Province
+Map.centerObject(tshopoRegion, 9);
