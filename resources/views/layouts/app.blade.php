@@ -10,7 +10,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
+<body class="bg-white dark:bg-gray-900 min-h-screen">
     @yield('content')
     <!-- <ul>
         <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
