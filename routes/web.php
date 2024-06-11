@@ -10,6 +10,10 @@ Route::get('/home', function () {
     return view('pages/home-connected');
 });
 
+Route::get('/message', function () {
+    return view('pages/message');
+});
+
 Route::get('/login', function () {
     return view('pages/login');
 });

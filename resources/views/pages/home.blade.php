@@ -3,9 +3,7 @@
 @section('content')
 <div>
     @include('components.navbar')
-    <h1 class="text-red-300">
-        Hello
-    </h1>
+    <h1>Acceuil</h1>
     @include('components.footer')
 </div>
 @endsection

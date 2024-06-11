@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-slate-900">
+<section class="min-h-screen flex items-center justify-center">
     <div class="rounded-lg p-4 w-full sm:w-[55%] md:w-[45%] lg:w-[30%]">
         <div class="px-4">
             <h1 class="text-2xl text-center uppercase dark:text-gray-50">Connexion</h1>
@@ -22,13 +22,13 @@
                 </div>
 
                 <div class="mt-6">
-                    <button type="submit" class="flex w-full justify-center rounded-lg bg-blue-600 px-3 py-2 text-gray-50 shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition">Connexion</button>
+                    <button type="submit" class="flex w-full justify-center rounded-lg bg-blue-500 px-3 py-2 text-gray-50 shadow-sm hover:bg-blue-500/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition">Connexion</button>
                 </div>
             </form>
 
             <p class="mt-6 text-center text-sm text-gray-500">
                 Vous n'avez pas de compte?
-                <a href="register" class="font-semibold leading-6 text-blue-500 hover:text-blue-500 hover:underline">S'inscrire</a>
+                <a href="register" class="font-semibold leading-6 text-blue-400 hover:text-blue-400/90 hover:underline">S'inscrire</a>
             </p>
         </div>
     </div>
