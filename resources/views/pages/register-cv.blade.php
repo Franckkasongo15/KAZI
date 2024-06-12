@@ -7,7 +7,9 @@
 </head>
 <body>
     <div>
-        <form action="" method="post">
+        <h2>Enregistrer votre cv</h2>
+
+        <form method="post" action="/cv">
             @csrf
             <label for="nom">Nom</label>
             <input type="text" name="nom">
@@ -41,6 +43,8 @@
 
             <label for="telephone">Telephone</label>
             <input type="text" name="telephone">
+
+            <input type="submit" value="Valider">
         </form>
     </div>
 </body>
