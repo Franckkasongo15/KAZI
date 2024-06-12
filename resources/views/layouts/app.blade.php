@@ -10,14 +10,8 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-900 min-h-screen">
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
     @yield('content')
-    <!-- <ul>
-        <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="/profile"><i class="fas fa-user"></i> Profile</a></li>
-        <li><a href="/settings"><i class="fas fa-cog"></i> Settings</a></li>
-        <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-    </ul> -->
 </body>
 
 </html>

@@ -10,14 +10,14 @@
                 <div class="mt-3">
                     <label for="email" class="block text-gray-900 dark:text-gray-50">Email <span class="text-red-500">*</span></label>
                     <div class="mt-1">
-                        <input id="email" name="email" type="email" autocomplete="email" placeholder="email@gmail.com" required class="block w-full rounded-lg border-0 py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 placeholder:text-sm outline-none dark:bg-gray-800 dark:focus:bg-gray-800 dark:text-gray-50">
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="email@gmail.com" required class="block w-full rounded-lg border-0 py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 placeholder:text-sm outline-none dark:bg-gray-800 dark:focus:bg-gray-800 dark:text-gray-50 focus:ring-blue-400">
                     </div>
                 </div>
 
                 <div class="mt-3">
                     <label for="password" class="block text-gray-900 dark:text-gray-50">Mots de passe <span class="text-red-500">*</span></label>
                     <div class="mt-1">
-                        <input id="password" name="password" type="password" autocomplete="email" placeholder="**************" required class="block w-full rounded-lg border-0 py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 placeholder:text-sm outline-none dark:bg-gray-800 dark:focus:bg-gray-800 dark:text-gray-50">
+                        <input id="password" name="password" type="password" autocomplete="email" placeholder="**************" required class="block w-full rounded-lg border-0 py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 placeholder:text-sm outline-none dark:bg-gray-800 dark:focus:bg-gray-800 dark:text-gray-50 focus:ring-blue-400">
                     </div>
                 </div>
 

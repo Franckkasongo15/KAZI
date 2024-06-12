@@ -3,7 +3,18 @@
 @section('content')
 <div>
     @include('components.navbar')
-    <h1>Acceuil</h1>
+
+    <div class="px-4 md:px-14 lg:px-20">
+        @include('components.hero')
+    </div>
+    <div class="bg-white">
+        @include('components.comment-ca-marche')
+    </div>
+    @include('components.rechercher-un-artisan')
+    <div class="bg-white">
+        @include('components.faq')
+    </div>
+
     @include('components.footer')
 </div>
 @endsection

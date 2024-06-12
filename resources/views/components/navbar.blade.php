@@ -1,9 +1,9 @@
-<nav class="fixed top-0 right-0 left-0 bg-white *border-gray-200 dark:bg-gray-800 dark:border-gray-700" x-data="{ darkMode: localStorage.getItem('darkMode') === 'dark' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches) }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val ? 'dark' : 'light')); $watch('darkMode', val => document.documentElement.classList.toggle('dark', val))">
+<nav class="bg-white *border-gray-200 dark:bg-gray-800 dark:border-gray-700" x-data="{ darkMode: localStorage.getItem('darkMode') === 'dark' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches) }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val ? 'dark' : 'light')); $watch('darkMode', val => document.documentElement.classList.toggle('dark', val))">
     <div class="px-4 md:px-14 lg:px-20 py-1">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
                 <div class="flex items-center">
-                    <button @click="open = !open" type="button" class="bg-white md:hidden dark:bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <button @click="open = !open" type="button" class="bg-white md:hidden dark:bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu desktop and mobile</span>
                         <svg class="h-6 w-6 text-gray-100" :class="{ 'hidden': open, 'block': !open }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -16,18 +16,6 @@
                         <h1 class="ml-1 text-xl font-semibold text-gray-900 dark:text-white">KAZI</h1>
                     </a>
                 </div>
-            </div>
-            <!-- hidden btn dark | light -->
-            <div class="hidden">
-                <!-- Add your user profile dropdown or other items here -->
-                <button @click="darkMode = !darkMode" class="bg-gray-200 dark:bg-gray-700 p-2 rounded-full">
-                    <svg x-show="!darkMode" class="w-6 h-6 text-gray-800 dark:text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.95 2.636a1 1 0 01.707 1.707l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 01.707-.293zm-9.9 0a1 1 0 00-.293 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.121-.293zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm8-6a1 1 0 100-2h-1a1 1 0 100 2h1zm-14 0a1 1 0 100-2H3a1 1 0 100 2h1zm11.95 6.364a1 1 0 011.121.293l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-9.9 0a1 1 0 011.121 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zM13 10a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                    <svg x-show="darkMode" class="w-6 h-6 text-gray-800 dark:text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M17.293 13.293a8 8 0 11-11.586 0 8 8 0 0111.586 0z"/>
-                    </svg>
-                </button>
             </div>
             <div class="flex items-center gap-x-2">
                 <div>

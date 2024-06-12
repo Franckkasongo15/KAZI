@@ -1,4 +1,4 @@
-<nav class="fixed top-0 right-0 left-0 bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700" x-data="{ open: false, darkMode: localStorage.getItem('darkMode') === 'dark' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches), sidebarOpen: false }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val ? 'dark' : 'light')); $watch('darkMode', val => document.documentElement.classList.toggle('dark', val))" :class="{ 'dark': darkMode }">
+<nav class="fixed top-0 right-0 left-0 z-10 bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700" x-data="{ open: false, darkMode: localStorage.getItem('darkMode') === 'dark' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches), sidebarOpen: false }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val ? 'dark' : 'light')); $watch('darkMode', val => document.documentElement.classList.toggle('dark', val))" :class="{ 'dark': darkMode }">
     <div class="px-4">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
@@ -17,9 +17,9 @@
                     </a>
                 </div>
             </div>
-            <div class="hidden sm:ml-6 sm:flex sm:items-center">
+            <div class="*hidden sm:ml-6 flex items-center">
                 <div class="relative" x-data="{ profileOpen: false }">
-                    <button @click="profileOpen = !profileOpen" class="flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <button @click="profileOpen = !profileOpen" class="flex items-center text-sm rounded-full focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-blue-500">
                         <span class="sr-only">Open user menu</span>
                         <div class="min-w-11 min-h-11 bg-blue-500 rounded-full"></div>
                     </button>
