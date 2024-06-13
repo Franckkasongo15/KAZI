@@ -31,7 +31,7 @@ class CvController extends Controller
     public function store(CvRequest $request)
     {
         Cv::create($request->validated());
-        return to_route('page.list-cv')->with('succes', "Client enregistrer avec succes !");
+        return to_route('cv.index')->with('succes', "Client enregistrer avec succes !");
     }
 
     /**
