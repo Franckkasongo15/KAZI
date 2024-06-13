@@ -31,7 +31,7 @@ class CvRequest extends FormRequest
             'adresse' => ['required','string','max:255'],
             'email' => ['required','email'],
             'telephone' => ['required','string','max:10'],
-            'user_id' => ['required','integer'],
+            // 'user_id' => ['required','integer'],
         ];
     }
 }

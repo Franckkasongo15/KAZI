@@ -20,7 +20,7 @@
             <label for="prenom">Prénom</label>
             <input type="text" name="prenom">
 
-            <label for="profession"></label>
+            <label for="profession">Profession</label>
             <select name="profession" id="profession">
                 <option value="developpeur web">Developper Mobile</option>
                 <option value="developpeur mobile">Developper Mobile </option>
@@ -43,6 +43,9 @@
 
             <label for="telephone">Telephone</label>
             <input type="text" name="telephone">
+
+            <!-- <label for="user_id">User id</label>
+            <input type="text" name="user_id"> -->
 
             <input type="submit" value="Valider">
         </form>
