@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('adresse');
             $table->string('email');
             $table->string('telephone');
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

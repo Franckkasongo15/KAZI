@@ -18,8 +18,7 @@ class Cv extends Model
         'dateNaissance',
         'adresse',
         'email',
-        'telephone',
-        'user_id',  
+        'telephone',  
     ];
 
     public function users()

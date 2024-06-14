@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cv;
 use Illuminate\Http\Request;
+use App\Http\Requests\CvRequest;
 
 class CvController extends Controller
 {
@@ -12,7 +13,8 @@ class CvController extends Controller
      */
     public function index()
     {
-        //
+        $cvs = Cv::all();
+        return view('pages.list-cv', ['cvs' => $cvs]);
     }
 
     /**
@@ -26,9 +28,10 @@ class CvController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CvRequest $request)
     {
-        //
+        Cv::create($request->validated());
+        return to_route('cv.index')->with('succes', "Client enregistrer avec succes !");
     }
 
     /**
@@ -44,15 +47,21 @@ class CvController extends Controller
      */
     public function edit(Cv $cv)
     {
-        //
+        return view('pages.edit-cv',[
+            'cv' => $cv
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Cv $cv)
+    public function update(CvRequest $request, Cv $cv)
     {
-        //
+        $cv->update($request->validated());
+        
+        return to_route('pages.list-cv')->with([
+            'success' => 'Cv modifié avec succes!'
+        ]);
     }
 
     /**
@@ -60,6 +69,9 @@ class CvController extends Controller
      */
     public function destroy(Cv $cv)
     {
-        //
+        $cv->delete();
+        return to_route('pages.list-cv')->with([
+            'success' => 'Cv supprimé avec succés'
+        ]);
     }
 }
