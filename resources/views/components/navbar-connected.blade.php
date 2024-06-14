@@ -18,11 +18,12 @@
                 </div>
             </div>
             <div class="*hidden sm:ml-6 flex items-center">
-                <div class="relative" x-data="{ profileOpen: false }">
+                <div class="relative felx items-center" x-data="{ profileOpen: false }">
                     <button @click="profileOpen = !profileOpen" class="flex items-center text-sm rounded-full focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-blue-500">
                         <span class="sr-only">Open user menu</span>
                         <div class="min-w-11 min-h-11 bg-blue-500 rounded-full"></div>
                     </button>
+
                     <div x-show="profileOpen" @click.away="profileOpen = false" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5" x-cloak>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300" @click="darkMode = !darkMode">
                             <i :class="darkMode ? 'fas fa-sun' : 'fas fa-moon'" class="mr-2"></i>
@@ -35,9 +36,9 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu" x-show="open" x-cloak>
+    <div class="*sm: hidden" id="mobile-menu" x-show="open" x-cloak>
         <div class="pt-2 pb-3 space-y-1">
-            <a href="/home" class="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700">Home</a>
+            <a href="/home" class="block pl-3 pr-4 py-2 border-l-4 border-blue-500 text-base font-medium text-blue-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700">Home</a>
             <a href="/profile" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 hover:text-gray-800">Profile</a>
             <a href="/settings" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 hover:text-gray-800">Settings</a>
             <a href="/logout" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 hover:text-gray-800">Logout</a>

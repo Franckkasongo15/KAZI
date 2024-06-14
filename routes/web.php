@@ -19,6 +19,10 @@ Route::get('/profile', function () {
     return view('pages/profile');
 });
 
+Route::get('/search', function () {
+    return view('pages/search');
+});
+
 Route::get('/add-job', function () {
     return view('pages/add-job');
 });

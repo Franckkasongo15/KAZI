@@ -2,7 +2,7 @@
 
 @section('home-content')
 <div class="mt-16 p-6"> 
-    <h1 class="dark:text-gray-50 text-2xl font-bold mb-6">Accueil</h1>
+    <h1 class="text-gray-900 dark:text-gray-50 text-2xl font-bold mb-6">Accueil</h1>
 
     <!-- Liste de job  -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -126,7 +126,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -153,7 +153,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -180,7 +180,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -207,7 +207,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -234,7 +234,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -261,7 +261,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -288,7 +288,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">
@@ -315,7 +315,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-xl font-semibold dark:text-gray-50">Recherche professeur de maths</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">Recherche professeur de maths</h3>
                 <p class="mt-2 text-gray-700 dark:text-gray-300">Mon fils a besoin de cours de mathématiques pour préparer son examen. 2 heures par semaine.</p>
             </div>
             <div class="flex items-center justify-between">

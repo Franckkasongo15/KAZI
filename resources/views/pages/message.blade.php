@@ -9,8 +9,8 @@
             <div class="flex flex-row flex-1">
                 <!-- Contact List -->
                 <div class="*w-1/4 border-r border-gray-200 dark:border-gray-700">
-                    <div class="*p-4 mb-4 pr-6 *border-b flex items-center border-gray-200 dark:border-gray-700 gap-x-1.5">
-                        <input type="text" placeholder="Rechercher un contact" class="block w-full p-2 px-4 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-50 outline-none focus:border-blue-400 placeholder:text-sm">
+                    <div class="mb-4 pr-6 flex items-center border-gray-200 dark:border-gray-700 gap-x-1.5">
+                        <input type="text" placeholder="Rechercher un contact" class="block w-full p-2 px-4 border rounded-lg bg-gray-100/80 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-50 outline-none focus:border-blue-400 placeholder:text-sm">
                         <button class="bg-blue-500 hover:bg-blue-500/90 rounded-lg p-2 px-2 lg:px-4">
                             <i class="fas fa-search text-gray-50"></i>
                         </button>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="p-4 pl-6 border-t border-gray-200 dark:border-gray-700">
                         <div class="flex items-center">
-                            <input type="text" placeholder="Tapez votre message..." class="block w-full p-2 px-4 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-50 outline-none focus:border-blue-400 placeholder:text-sm">
+                            <input type="text" placeholder="Tapez votre message..." class="block w-full p-2 px-4 border rounded-lg bg-gray-100/85 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-50 outline-none focus:border-blue-400 placeholder:text-sm">
                             <button class="ml-2 p-2 bg-blue-500 text-white rounded-lg">Envoyer 
                                 <!-- <i class="fas fa-user text-gray-50"></i> -->
                             </button>

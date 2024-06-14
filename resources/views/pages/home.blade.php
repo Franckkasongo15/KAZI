@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content') 
 <div>
     @include('components.navbar')
 
-    <div class="px-4 md:px-14 lg:px-20">
+    <div class="bg-gray-900 px-4 md:px-14 lg:px-20">
         @include('components.hero')
     </div>
     <div class="bg-white">

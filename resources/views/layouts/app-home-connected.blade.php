@@ -21,25 +21,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/message" class="w-full py-2 rounded-lg px-3 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-50 flex items-center">
+                    <a href="/message" class="w-full py-2 rounded-lg px-3 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-50 flex items-center">
                         <i class="fas fa-envelope"></i>
                         <span x-show="sidebarOpen" x-transition class="hidden">Message</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/add-job" class="w-full py-2 rounded-lg px-3 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-50 flex items-center">
+                    <a href="/add-job" class="w-full py-2 rounded-lg px-3 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-50 flex items-center">
                         <i class="fas fa-plus"></i>
                         <span x-show="sidebarOpen" x-transition class="hidden">Add job</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/search" class="w-full py-2 rounded-lg px-3 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-50 flex items-center">
+                    <a href="/search" class="w-full py-2 rounded-lg px-3 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-50 flex items-center">
                         <i class="fas fa-search"></i>
                         <span x-show="sidebarOpen" x-transition class="hidden">Recherche</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/about" class="w-full py-2 rounded-lg px-3 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-50 flex items-center">
+                    <a href="/about" class="w-full py-2 rounded-lg px-3 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-50 flex items-center">
                         <i class="fas fa-info-circle"></i>
                         <span x-show="sidebarOpen" x-transition class="hidden">Apropos</span>
                     </a>
