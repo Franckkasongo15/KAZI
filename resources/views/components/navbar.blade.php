@@ -1,4 +1,4 @@
-<nav class="fixed w-full *bg-white *dark: bg-gray-800 dark:border-gray-700" x-data="{ darkMode: localStorage.getItem('darkMode') === 'dark' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches) }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val ? 'dark' : 'light')); $watch('darkMode', val => document.documentElement.classList.toggle('dark', val))">
+<nav class="8fixed w-full *bg-white *dark: bg-gray-800 dark:border-gray-700" x-data="{ darkMode: localStorage.getItem('darkMode') === 'dark' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches) }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val ? 'dark' : 'light')); $watch('darkMode', val => document.documentElement.classList.toggle('dark', val))">
     <div class="px-4 md:px-14 lg:px-20 py-1">
         <div class="flex justify-between h-16">
             <div class="flex items-center">

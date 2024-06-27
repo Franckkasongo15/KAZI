@@ -26,7 +26,7 @@
                         <div class="ml-3">
                             <p class="text-gray-50">Eddy mk</p>
                             <div>
-                                <i class="fas fa-info-circle *text-yellow-400 text-yellow-300/90 text-sm"></i>
+                                <i class="fa-solid fa-location-dot *text-yellow-400 text-yellow-300/90 text-xs"></i>
                                 <span class="text-gray-400 text-sm -mt-6">Lubumbashi RDC</span>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                         <div class="ml-3">
                             <p class="text-gray-50">Eddy mk</p>
                             <div>
-                                <i class="fas fa-info-circle *text-yellow-400 text-yellow-300/90 text-sm"></i>
+                                <i class="fa-solid fa-location-dot *text-yellow-400 text-yellow-300/90 text-sm"></i>
                                 <span class="text-gray-400 text-sm -mt-6">Lubumbashi RDC</span>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                         <div class="ml-3">
                             <p class="text-gray-50">Eddy mk</p>
                             <div>
-                                <i class="fas fa-info-circle *text-yellow-400 text-yellow-300/90 text-sm"></i>
+                                <i class="fa-solid fa-location-dot *text-yellow-400 text-yellow-300/90 text-sm"></i>
                                 <span class="text-gray-400 text-sm -mt-6">Lubumbashi RDC</span>
                             </div>
                         </div>

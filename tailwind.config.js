@@ -7,7 +7,22 @@ export default {
     ],
     darkMode: "media",
     theme: {
-        extend: {},
+        extend: {
+            display: ["group-hover"],
+        },
     },
-    plugins: [],
+    plugins: [
+        function ({ addUtilities }) {
+            addUtilities({
+                ".scrollbar-hide": {
+                    /* Firefox */
+                    "scrollbar-width": "none",
+                    /* Safari and Chrome */
+                    "&::-webkit-scrollbar": {
+                        display: "none",
+                    },
+                },
+            });
+        },
+    ],
 };

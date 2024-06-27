@@ -8,7 +8,9 @@
 
                 <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-10">
                     <div class="*md:w-[50%]">
-                        <div class=" bg-blue-500 rounded-lg h-52 lg:h-60 w-full shadow-md"></div>
+                        <div class=" bg-blue-500 rounded-lg h-52 lg:h-60 w-full shadow-md">
+                            <img src="https://static.vecteezy.com/system/resources/previews/000/229/827/original/vector-web-search.jpg" class="rounded-lg h-52 lg:h-60 w-full *shadow-md object-cover" alt="rechercher">
+                        </div>
                     </div>
 
                     <div class="*md:w-[50%]">
@@ -25,7 +27,9 @@
                 <div class="mt-4 mb-4 md:mb-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-10">
                     <!-- mobile image -->
                     <div class="md:hidden">
-                        <div class=" bg-blue-500 rounded-lg h-52 lg:h-60 w-full shadow-md"></div>
+                        <div class=" bg-blue-500 rounded-lg h-52 lg:h-60 w-full shadow-md">
+                            <img src="https://img.freepik.com/vecteurs-premium/homme-travaillant-ordinateur-homme-sa-tete-mot-non-dessus_1113671-162.jpg" class="rounded-lg h-52 lg:h-60 w-full *shadow-md object-cover" alt="contacter mobile">
+                        </div>
                     </div>
 
                     <div class="">
@@ -35,7 +39,9 @@
                     </div>
 
                     <div class="hidden md:block">
-                        <div class=" bg-blue-500 rounded-lg h-52 lg:h-60 w-full shadow-md"></div>
+                        <div class=" bg-blue-500 rounded-lg h-52 lg:h-60 w-full shadow-md">
+                            <img src="https://img.freepik.com/vecteurs-premium/homme-travaillant-ordinateur-homme-sa-tete-mot-non-dessus_1113671-162.jpg" class="rounded-lg h-52 lg:h-60 w-full *shadow-md object-cover" alt="contacter desktop">
+                        </div>
                     </div>
                 </div>
             </div>

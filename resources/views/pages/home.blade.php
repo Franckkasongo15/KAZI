@@ -5,9 +5,9 @@
     @include('components.navbar')
 
     <div class="bg-gray-900 px-4 md:px-14 lg:px-20">
-        @include('components.hero')
+        @include('components.hero') 
     </div>
-    <div class="bg-white text-red-700">
+    <div class="bg-white text-red-700 pt-12">
         @include('components.carousel')
     </div>
     <div class="bg-white">
