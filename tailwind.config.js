@@ -5,7 +5,7 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
-    darkMode: "class",
+    darkMode: "media",
     theme: {
         extend: {
             display: ["group-hover"],
