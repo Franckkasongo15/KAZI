@@ -110,7 +110,7 @@
             <h5 class="text-center">
                 <a href="/login" class="text-gray-50 hover:text-gray-500/90">
                     <span>Encore plus</span>
-                    <i class="fas fa-plus text-sm ml-1"></i>
+                    <i class="fas fa-arrow-right text-sm ml-1"></i>
                 </a>
             </h5>
         </div>
