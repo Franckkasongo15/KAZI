@@ -20,8 +20,8 @@
                     <p class="text-gray-700 dark:text-gray-300 text-center">johndoe@example.com</p>
 
                     <div class="flex items-center justify-center">
-                        <button class="text-gray-50 hover:text-gray-300 underline">
-                            <i class="fa-solid fa-location-dot text-sm"></i>
+                        <button class="text-gray-900 dark:text-gray-50 hover:text-gray-400 underline">
+                            <i class="fas fa-download text-sm"></i>
                             <span>cv</span>
                         </button>
                     </div>

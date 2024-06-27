@@ -1,4 +1,4 @@
-<nav class="fixed top-0 right-0 left-0 z-10 bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700" x-data="{ open: false, darkMode: localStorage.getItem('darkMode') === 'dark' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches), sidebarOpen: false }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val ? 'dark' : 'light')); $watch('darkMode', val => document.documentElement.classList.toggle('dark', val))" :class="{ 'dark': darkMode }">
+<nav class="fixed top-0 right-0 left-0 z-10 bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700" x-data="{ open: false, profileOpen: false, darkMode: localStorage.getItem('darkMode') === 'dark' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches) }" x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val ? 'dark' : 'light')); $watch('darkMode', val => document.documentElement.classList.toggle('dark', val))" :class="{ 'dark': darkMode }">
     <div class="px-4">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
@@ -17,18 +17,31 @@
                     </a>
                 </div>
             </div>
-            <div class="*hidden sm:ml-6 flex items-center">
-                <div class="relative felx items-center" x-data="{ profileOpen: false }">
+            <div class="flex items-center">
+                <div class="relative" x-data="{ profileOpen: false }">
                     <button @click="profileOpen = !profileOpen" class="flex items-center text-sm rounded-full focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-blue-500">
                         <span class="sr-only">Open user menu</span>
                         <div class="min-w-11 min-h-11 bg-blue-500 rounded-full"></div>
                     </button>
 
                     <div x-show="profileOpen" @click.away="profileOpen = false" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5" x-cloak>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300" @click="darkMode = !darkMode">
-                            <i :class="darkMode ? 'fas fa-sun' : 'fas fa-moon'" class="mr-2"></i>
-                            <span x-text="darkMode ? 'Mode Clair' : 'Mode Sombre'"></span>
-                        </a>
+                        <div class="p-2">
+                            <a href="/profile" class="block rounded-md px-4 py-2 text-sm hover:bg-gray-200/90 hover:dark:bg-slate-900 text-gray-700 dark:text-gray-300">
+                                <i class="fas fa-user mr-2"></i>
+                                <span>Profile</span>
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-sm rounded-md hover:bg-gray-200/90 hover:dark:bg-slate-900 text-gray-700 dark:text-gray-300" @click="darkMode = !darkMode">
+                                <i :class="darkMode ? 'fas fa-sun' : 'fas fa-moon'" class="mr-2"></i>
+                                <span x-text="darkMode ? 'Mode Clair' : 'Mode Sombre'"></span>
+                            </a>
+                            <form method="POST" action="/logout">
+                                @csrf
+                                <button type="submit" class="block w-full text-left px-4 py-2 rounded-md text-sm hover:bg-gray-200/90 hover:dark:bg-slate-900 text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-sign-out-alt mr-2"></i>
+                                    <span>Deconnection</span>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -36,12 +49,15 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="*sm: hidden" id="mobile-menu" x-show="open" x-cloak>
+    <div class="sm:hidden" id="mobile-menu" x-show="open" x-cloak>
         <div class="pt-2 pb-3 space-y-1">
             <a href="/home" class="block pl-3 pr-4 py-2 border-l-4 border-blue-500 text-base font-medium text-blue-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700">Home</a>
             <a href="/profile" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 hover:text-gray-800">Profile</a>
             <a href="/settings" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 hover:text-gray-800">Settings</a>
-            <a href="/logout" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 hover:text-gray-800">Logout</a>
+            <form method="POST" action="/logout">
+                @csrf
+                <button type="submit" class="block w-full text-left pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 hover:text-gray-800">Logout</button>
+            </form>
         </div>
     </div>
 </nav>
