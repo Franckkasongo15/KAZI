@@ -20,7 +20,7 @@
                         <i class="fas fa-chevron-down text-sm lg:"></i>
                     </button>
                     <div class="faq-answer p-4 bg-white hidden">
-                        <span>Comment trouver un artisan.</span> <br />                       
+                        <span>Comment trouver un artisan.</span> <br />
                         <span>Comment premdre rendez vous?</span>
                     </div>
                 </div>
