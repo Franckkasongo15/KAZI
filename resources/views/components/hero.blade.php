@@ -1,4 +1,5 @@
-<section class="py-20 md:py-28 lg:py-36 flex items-center justify-center">
+<img src="/elect.jpg" alt="image"   class="w-[3000px] h-auto md:w-full md:h-auto" >
+<section class="py-20 md:py-28 lg:py-36 flex items-center justify-center absolute top-0 left-0 w-full z-10">
     <div class="w-full md:w-[95%] lg:w-[80%]">
         <h1 class="text-2xl md:text-3xl text-gray-50 text-center">
             Besoin d'un technicien qualifié ?

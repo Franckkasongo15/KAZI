@@ -13,6 +13,7 @@
                         </svg>
                     </button>
                     <a href="/home" class="flex items-center">
+                        <img src="/icon.png" alt=""  class="w-12 h-12 bg-blue-500 rounded-full border-3  border-gray-500 ">
                         <h1 class="ml-1 text-xl font-semibold *text-gray-900 *dark: text-white">KAZI</h1>
                     </a>
                 </div>

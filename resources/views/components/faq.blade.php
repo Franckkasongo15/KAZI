@@ -24,6 +24,36 @@
                         <span>Comment premdre rendez vous?</span>
                     </div>
                 </div>
+
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left p-4 bg-gray-200 hover:bg-gray-300 focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
+                        Comment proposer un service ?
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="faq-answer p-4 bg-white hidden">
+                        Créer un compte et poster vos service...
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left p-4 bg-gray-200 hover:bg-gray-300 focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
+                        Comment trouver un prestataire de services facilement ?
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="faq-answer p-4 bg-white hidden">
+                        Utilser notre bar de recherche pour trouver un artisan.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left p-4 bg-gray-200 hover:bg-gray-300 focus:outline-none flex justify-between items-center" onclick="toggleAccordion(this)">
+                        Qui peux proposer des services ?
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="faq-answer p-4 bg-white hidden">
+                        Toute personne ayant  18 ans ou plus
+                    </div>
+                </div>
             </div>
         </div>
     </div>

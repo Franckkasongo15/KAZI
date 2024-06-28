@@ -1,3 +1,4 @@
+<h2 class="text-xl md:text-2xl text-gray-800 text-center font-bold mb-6">Services Proposer</h2>
 <div class="relative overflow-hidden px-4 border">
     <div class="flex overflow-x-scroll scrollbar-hide space-x-4" id="carousel">
         <div class="flex-none w-64 h-40 bg-gray-200 rounded-md">
